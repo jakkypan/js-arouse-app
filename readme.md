@@ -1,3 +1,6 @@
+[https://harttle.land/2017/12/24/launch-app-from-browser.html](https://harttle.land/2017/12/24/launch-app-from-browser.html)
+[https://jingbin.me/2018/07/02/deeplink-intro-use/](https://jingbin.me/2018/07/02/deeplink-intro-use/)
+
 #### 概述
 
 使用`js`唤起`Native`下的`App`，在 QQ、微博、微信中的简单库文件，只需要配置三项，库来帮你完成所有情况的唤起
