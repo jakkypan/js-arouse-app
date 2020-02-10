@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!-- saved from url=(0095)https://xiangji.qq.com/download.html?categoryId=wuhan&wmId=memorialDayWuhan2&from=singlemessage -->
+<html><script src="chrome-extension://ljdobmomdgdljniojadhoplhkpialdid/page/prompt.js"></script><script src="chrome-extension://ljdobmomdgdljniojadhoplhkpialdid/page/runScript.js"></script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="cache-control" content="no-cache">
+
+        <title>test</title>
+        <meta name="description" itemprop="description" content="test">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" type="text/css" href="./test_files/main.css">
+        <style>
+          .title {
+            position: absolute;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            top: 7%;
+          }
+          .main {
+            position: absolute;
+            text-align: center;
+            top: 22%;
+
+          }
+          .main img {
+            width: 53.2%;
+          }
+        </style>
+        <script type="text/javascript">
+            function loadScript(filepath, onloadCallback) {
+                var scriptDom = document.createElement("script");
+                scriptDom.onload = scriptDom.onreadystatechange = onloadCallback;
+                scriptDom.type = "text/javascript";
+                scriptDom.src = filepath;
+                document.body.appendChild(scriptDom);
+            }
+        </script>
+    </head>
+    <body style="font-size: 4.755px;">
+        <div class="wrapper-outer" style="background-color:black;">
+            <div id="uploadSection" class="wrapper-inner index-upload-wrapper" style="background-color: black; width: 7%; margin-left: -3.5%;">
+              <div class="title">
+                test
+              </div>
+              <div class="main">
+                <img src="./test_files/main.jpg">
+              </div>
+              <div class="downbt" style="top:89%;">
+                    <a id="download_url" href="https://itunes.apple.com/cn/app/shui-yin-xiang-ji/id637428894"><img src="./test_files/button-v1.png" width="15%"></a>
+              </div>
+            </div>
+        </div>
+    <script src="./test_files/pituconsole.js"></script>
+    <script src="./test_files/jquery-3.2.1.min.js"></script>
+    <script src="./test_files/qqapi.js"></script>
+    <script src="./test_files/global-1.3.js"> </script>
+    <script src="./test_files/main-1.js"></script>
+    <script src="./test_files/launchapp-2.0.js"></script>
+    <script type="text/javascript">
+      indexPageReady();
+      var schemeConfig = {
+        wuhanComeOn: {
+          title: '123',
+          url: 'https://dldir1.qq.com/invc/zebra/watermarks/wuhanComeOn.jpg'
+        },
+        wuhanComeOnTime: {
+          title: '123',
+          url: 'https://dldir1.qq.com/invc/zebra/watermarks/wuhanComeOnTime.jpg'
+        },
+        wuhanMultiPics: {
+          title: '123',
+          url: 'https://dldir1.qq.com/invc/zebra/watermarks/wuhanMultiPics.jpg'
+        },
+        wuhanMultiPicsTime: {
+          title: '123',
+          url: 'https://dldir1.qq.com/invc/zebra/watermarks/wuhanMultiPicsTime.jpg'
+        },
+        wuhanTiWen: {
+          title: '123',
+          url: 'https://dldir1.qq.com/invc/zebra/watermarks/wuhanTiWen.jpg'
+        },
+        memorialDayWuhan: {
+          title: '123',
+          url: 'https://dldir1.qq.com/invc/zebra/watermarks/memorialDayWuhan.jpg'
+        },
+        memorialDayWuhan2: {
+          title: '123',
+          url: 'https://dldir1.qq.com/invc/zebra/watermarks/memorialDayWuhan2.jpg'
+        },
+        wuhanComeOnLine: {
+          title: '123',
+          url: 'https://dldir1.qq.com/invc/zebra/watermarks/wuhanComeOnLine.jpg'
+        }
+      }
+      var categoryId = pageGetParam('categoryId');
+      var wmId = pageGetParam('wmId');
+      var andInstallURL = 'https://st1.xiangji.qq.com/android_apk/APK_V1_AND_WMC_3.1.6_482/V1_AND_WMC_3.1.6_482_360SC_A.apk';
+      var iosInstallURL = 'https://itunes.apple.com/cn/app/shui-yin-xiang-ji/id637428894';
+      var iosSchemeConfig = schemeConfig[wmId] || {title:'',url:''}
+      // var andScheme = 'mqqwmcv240://wmchost/launch?categoryId=food&wmId=foodie&ret=0';
+      // var iosScheme = 'mqqwmcv260://wmchost/launch?wmId=diary';
+      var andScheme = 'mqqwmcv240://wmchost/launch?categoryId='+categoryId+'&wmId='+wmId+'&ret=0';
+      var iosScheme = 'mqqwmcv260://wmchost/launch?wmId='+wmId+'&title='+encodeURIComponent(iosSchemeConfig.title)+'&thumbUrl='+iosSchemeConfig.url;
+      var packageName = '';
+      var by = '';
+      var source = '';
+      var appname = '';
+			if (/Android (\d+)/.test(navigator.userAgent)) {
+				$('#download_url').attr('href', andInstallURL);
+        packageName = 'com.tencent.zebra';
+        appname = 'zebra';
+			} else {
+				$('#download_url').attr('href', iosInstallURL);
+        packageName = 'com.tencent.watermarkcamera';
+        appname = 'watermarkcamera';
+			}
+      function pageGetParam(pKey) {
+        var queryStr = window.location.search;
+        if (queryStr.length > 0) {
+          var qMark = queryStr.indexOf("?");
+          if (qMark >= 0) {
+            queryStr = queryStr.substr(qMark+1);
+            var queryList = queryStr.split("&");
+            for (var queryIndex in queryList) {
+              var queryRow = queryList[queryIndex];
+              var queryPair = queryRow.split("=");
+              if (queryPair.length >= 2) {
+                var queryKey = queryPair[0];
+                if (queryKey == pKey) {
+                  var queryVal = decodeURIComponent(queryPair[1]);
+                  return queryVal;
+                }
+              }
+            }
+          }
+        }
+        return "";
+      }
+      function IsReturnFromDownload() {
+        var name = "xiangjidownloadaccess";
+        var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+        if(arr=document.cookie.match(reg)) {
+          return true;
+        }
+        var exp = new Date();
+        exp.setTime(exp.getTime() + 5*1000);
+        document.cookie = name + "=1;expires=" + exp.toGMTString();
+        return false;
+      }
+      if(IsReturnFromDownload() == false) {
+        launchAppNow(andScheme, iosScheme, andInstallURL, iosInstallURL, packageName , by, source, appname);
+      }
+    </script>
+    <script type="text/javascript" src="./test_files/tcss.ping.https.js"></script>
+
+
+</body></html>
